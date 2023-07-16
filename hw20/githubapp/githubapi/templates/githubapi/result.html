@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Github App - Result</title>
+</head>
+<body>
+    {% if processing %}
+        <p>Data processing in progress...</p>
+    {% else %}
+        <h1>Repositories:</h1>
+        <ul>
+            {% for repo in repos %}
+                <li>{{ repo.name }} - {{ repo.stars }} stars</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
